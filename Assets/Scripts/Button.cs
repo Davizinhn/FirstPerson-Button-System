@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Button : MonoBehaviour
 {
@@ -22,6 +23,11 @@ public class Button : MonoBehaviour
     public float timeOut = 2f;
     public GameObject clue;
     public bool isLocked;
+
+    public void Start()
+    {
+        clue.GetComponent<TMP_Text>().text=keyToPress.ToString();
+    }
 
     public void Update()
     {
