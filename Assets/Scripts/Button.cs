@@ -40,6 +40,7 @@ public class Button : MonoBehaviour
         RaycastHit hit;
         Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
         if (Physics.Raycast(ray, out hit, distance)) {
+            Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * distance, Color.green);
             isHitting=hit.collider.gameObject == this.gameObject;
         }else{isHitting=false;}
     }
