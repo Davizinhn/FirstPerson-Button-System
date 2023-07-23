@@ -8,7 +8,6 @@ public class Button : MonoBehaviour
     [Header("Event")]
     public UnityEngine.UI.Button.ButtonClickedEvent eventToExecute = new UnityEngine.UI.Button.ButtonClickedEvent();
 
-    [Header("Settings")]
     bool canPress;
     bool isPressing;
     bool isHitting;
@@ -17,6 +16,7 @@ public class Button : MonoBehaviour
         CanBePressedMultipleTimes,
         CanBePressedOneTime,
     }
+    [Header("Settings")]
     public Type type;
     public KeyCode keyToPress=KeyCode.E;
     public float distance = 2f;
